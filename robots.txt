@@ -1,0 +1,5 @@
+﻿User-agent: *
+Allow: /
+
+
+Sitemap: https://wiring.voltageelectricians.xyz/sitemap_index.xml

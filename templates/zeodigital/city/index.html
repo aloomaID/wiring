@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>{{metatitle}}</title>
+    <meta name="title" content="{{metatitle}}" />
+    <meta name="robots" content="NOODP, NOYDIR, index, follow" />
+    <link rel="canonical" href="https://{{canonicaldomain}}/" />
+    <meta name="description" content="{{metadescription}}" />
+    <meta property="og:title" content="{{metatitle}}" />
+    <meta property="og:description" content="{{metadescription}}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="{{niche}}" />
+    {{schema_page}}
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Favicon -->
+    <link href="../../static/img/favicon.ico" rel="icon">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <script type="application/ld+json" class="kadence-faq-schema-graph kadence-faq-schema-graph--kb-faq11_24313a-ad">
+        {{schema_two}}
+    </script>
+    <!-- Flaticon Font -->
+    <link href="../../static/lib/flaticon/font/flaticon.css" rel="stylesheet">
+    {{inner_tag}}
+    <!-- Libraries Stylesheet -->
+    <link href="../../static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../../static/css/style.css" rel="stylesheet">
+    <style>
+       
+        .faq {
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin: 10px 0;
+        }
+        .faq h3 {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #E45F4E;
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .faq h3:hover {
+            background-color: #0056b3;
+        }
+        .faq p {
+            display: none;
+            padding: 10px;
+            background-color: #f9f9f9;
+            margin: 0;
+            border-left: 3px solid #E45F4E;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const faqs = document.querySelectorAll('.faq h3');
+            faqs.forEach(faq => {
+                faq.addEventListener('click', function() {
+                    this.nextElementSibling.style.display =
+                        this.nextElementSibling.style.display === 'block' ? 'none' : 'block';
+                });
+            });
+        });
+    </script>
+</head>
+
+<body class="bg-white">
+    <!-- Topbar Start -->
+    <div class="container-fluid">
+        <div class="row bg-secondary py-2 px-lg-5">
+            <div class="col-lg-6 text-center text-lg-left">
+                <div class="d-inline-flex align-items-center">
+                    <p class="mr-2 mb-2 mb-lg-0 text-white">Opening Hours:</p>
+                    <span class="mb-2 mb-lg-0 text-white">8.00AM - 9.00PM</span>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center text-lg-right">
+                
+            </div>
+        </div>
+        <div class="row py-3 px-lg-5">
+            <div class="col-lg-4">
+                <a href="" class="navbar-brand d-none d-lg-block">
+                    <img src="../../static/img/logo.png" alt="{{niche}}" width="300" height="80">
+                </a>
+            </div>
+            <div class="col-lg-8 text-center text-lg-right">
+                <div class="d-inline-flex align-items-center">
+                    <div class="d-inline-flex flex-column text-center pr-3 border-right">
+                        <h6>Our Office</h6>
+                        <p class="m-0">{{current}}</p>
+                    </div>
+                    <div class="d-inline-flex flex-column text-center px-3 border-right">
+                        <h6>Email Us</h6>
+                        <p class="m-0">info@{{domain}}</p>
+                    </div>
+                    <a href="{{tel_link_number}}">
+                        <div class="d-inline-flex flex-column text-center pl-3">
+                            <h6>Call Us</h6>
+                            <p class="m-0">{{number}}</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0 nav-bar">
+        <nav class="navbar navbar-expand-lg bg-none navbar-dark py-0">
+            <a href="" class="navbar-brand d-block d-lg-none">
+                <img src="../../static/img/logo.png" alt="{{niche}}" width="300" height="80">
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav m-auto py-4">
+                    <a href="https://{{domain}}/" class="nav-item nav-link active">Home</a>
+                    <a href="https://{{domain}}/services/" class="nav-item nav-link">Our Services</a>
+                    <a href="https://{{domain}}/contact-us/" class="nav-item nav-link">Contact</a>
+                    <a href="https://{{domain}}/about-us/" class="nav-item nav-link">About Us</a>
+                    <a href="#faq" class="nav-item nav-link">FAQs</a>
+                    <a href="#location" class="nav-item nav-link">Locations</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Popular Pages In {{current}}</a>
+                        <div class="dropdown-menu text-capitalize">
+                            {{headerlink}}
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0">
+        <div id="blog-carousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="../../static/img/carousel-1.jpg" alt="Image">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <h4 class="text-primary m-0">{{niche}}</h4>
+                        <h1 class="display-4 m-0 mt-2 mt-md-3 text-white">{{titleheader1}}</h1>
+                        <p>{{descriptionheader1}}</p>
+                        <a href="{{tel_link_number}}" class="btn btn-lg btn-primary mt-3 mt-md-4 px-4"><i class="fa fa-phone-alt text-white"></i>   Click Here To Call Us {{number}}</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+    <!-- Features Start -->
+    <div class="container-fluid py-5 py-lg-0 feature">
+        <div class="row py-5 py-lg-0">
+            <div class="col-lg-4 p-0">
+                <div class="feature-item d-flex align-items-center border-right px-5 mb-4 mb-lg-0">
+                    <i class="flaticon-policeman display-3 text-primary mr-4"></i>
+                    <div class="">
+                        <h5 class="mb-3">Professional Staff</h5>
+                        <p class="m-0">Our team is comprised of highly trained professionals, ready to handle any task with expertise.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 p-0">
+                <div class="feature-item d-flex align-items-center border-right px-5 mb-4 mb-lg-0">
+                    <i class="flaticon-helmet display-3 text-primary mr-4"></i>
+                    <div class="">
+                        <h5 class="mb-3">Latest Equipments</h5>
+                        <p class="m-0">We utilize cutting-edge tools and technology to deliver the best possible service, ensuring precision and speed.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 p-0">
+                <div class="feature-item d-flex align-items-center px-5">
+                    <i class="flaticon-surveillance display-3 text-primary mr-4"></i>
+                    <div class="">
+                        <h5 class="mb-3">24/7 Support</h5>
+                        <p class="m-0">We are available around the clock to ensure your {{niche}} service needs are met promptly and efficiently.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Features End -->
+
+    <div class="container-fluid mb-5" style="background: #f6f6f6;"></div>
+        <div class="row align-items-center">
+            <div class="col-lg-6 px-0">
+                <img width="100%" class="img-fluid" src="{{images_picker1}}" alt="Image">
+            </div>
+            <div class="col-lg-6 py-5 py-lg-0 px-3 px-lg-5">
+                <h5 class="text-primary mb-3">Who Are We</h5>
+                <h2 class="mb-4">{{titleheaderwhoweare}}</h2>
+                <p>{{descriptionheaderwhoweare}}</p>
+                <div class="row py-2">
+                    <div class="col-sm-6">
+                        <i class="flaticon-approved display-3 text-primary"></i>
+                        <h5 class="mt-2">Govt Approved</h5>
+                        <p>we are dedicated to providing reliable and professional {{niche}} services. Our licensed technicians adhere to all local regulations and safety standards, ensuring the highest quality of service for your security needs. Trust Our {{niche}} service for prompt and trustworthy assistance.</p>
+                    </div>
+                    <div class="col-sm-6">
+                        <i class="flaticon-medal display-3 text-primary"></i>
+                        <h5 class="mt-2">Award Winning</h5>
+                        <p>Our {{niche}} service offers fast, reliable {{niche}} solutions tailored to your needs. our licensed professionals are available 24/7.
+
+                            We prioritize your security and satisfaction, using the latest technology to protect what matters most. Trust Our {{niche}} service for all your {{niche}} needs—your safety is our mission!</p>
+                    </div>
+                </div>
+                <a href="{{tel_link_number}}" class="btn btn-lg px-4 btn-primary">Click Here To Call Us {{number}}</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid mb-5" style="background: #f6f6f6;"></div>
+        <div class="row align-items-center">
+            <div class="col-lg-6 py-5 py-lg-0 px-3 px-lg-5">
+                <h2 class="mb-4">{{titleheaderwhowe1}}</h2>
+                <p>{{descriptionheaderwhowe1}}</p>
+                
+                <a href="{{tel_link_number}}" class="btn btn-lg px-4 btn-primary">Click Here To Call Us {{number}}</a>
+            </div>
+            <div class="col-lg-6 px-0">
+                <img width="100%" class="img-fluid" src="{{images_picker6}}" alt="Image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Start -->
+    <div class="container pt-5">
+        <div class="d-flex flex-column text-center mb-5">
+            <h5 class="text-primary mb-3">Our Services</h5>
+            <h2 class="m-0">{{titleheader2}}</h2>
+        </div>
+        <div class="row pb-3">
+            {{city_page_service}}
+        </div>
+    </div>
+    <!-- Services End -->
+
+     <!-- Facts Start -->
+    <div class="container-fluid bg-primary my-5 py-5 text-center">
+        <div class="row pt-5">
+            <div class="col-lg-3 col-sm-6 mb-5">
+                <h5 class="fa fa-user-shield mb-4 d-inline-flex align-items-center justify-content-center border rounded-circle text-white" style="width: 50px; height: 50px;"></h5>
+                <h4 class="display-4 text-white mb-3" data-toggle="counter-up">250</h4>
+                <h6 class="text-white m-0">Our Staff</h6>
+            </div>
+            <div class="col-lg-3 col-sm-6 mb-5">
+                <h5 class="fa fa-users mb-4 d-inline-flex align-items-center justify-content-center border rounded-circle text-white" style="width: 50px; height: 50px;"></h5>
+                <h4 class="display-4 text-white mb-3" data-toggle="counter-up">1500</h4>
+                <h6 class="text-white m-0">Happy Client</h6>
+            </div>
+            <div class="col-lg-3 col-sm-6 mb-5">
+                <h5 class="fa fa-shield-alt mb-4 d-inline-flex align-items-center justify-content-center border rounded-circle text-white" style="width: 50px; height: 50px;"></h5>
+                <h4 class="display-4 text-white mb-3" data-toggle="counter-up">10000</h4>
+                <h6 class="text-white m-0">Project Complete</h6>
+            </div>
+            <div class="col-lg-3 col-sm-6 mb-5">
+                <h5 class="fa fa-award mb-4 d-inline-flex align-items-center justify-content-center border rounded-circle text-white" style="width: 50px; height: 50px;"></h5>
+                <h4 class="display-4 text-white mb-3" data-toggle="counter-up">25</h4>
+                <h6 class="text-white m-0">Award Winning</h6>
+            </div>
+        </div>
+    </div>
+    <!-- Facts End -->
+
+    <!-- Features Start -->
+    <div class="container pt-5">
+        <div class="row">
+            <div class="col-lg-5 mb-5">
+                <h5 class="text-primary mb-3">Why Choose Us?</h5>
+                <h2 class="mb-4">{{titleheaderwhychooseus}}</h2>
+                <img class="img-thumbnail mb-4 p-3" src="{{images_picker2}}" alt="Image">
+                <p>
+                    {{descriptionheaderwhychooseus}}
+                </p>
+                <a href="{{tel_link_number}}" class="btn btn-lg btn-primary mt-2">Click Here To Call Us {{number}}</a>
+            </div>
+            <div class="col-lg-7">
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="d-flex flex-column">
+                            <div class="d-flex align-items-center mb-3">
+                                <h3 class="flaticon-policeman font-weight-normal d-flex flex-shrink-0 align-items-center justify-content-center bg-primary text-white m-0 mr-3" style="width: 45px; height: 45px;"></h3>
+                                <h6 class="text-truncate m-0">High Safety Measures</h6>
+                            </div>
+                            <p>Your safety is our top priority, and we adhere to the strictest safety protocols in every service we provide.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="d-flex flex-column">
+                            <div class="d-flex align-items-center mb-3">
+                                <h3 class="flaticon-bodyguard font-weight-normal d-flex flex-shrink-0 align-items-center justify-content-center bg-primary text-white m-0 mr-3" style="width: 45px; height: 45px;"></h3>
+                                <h6 class="text-truncate m-0">Trained Staff</h6>
+                            </div>
+                            <p>Our team is comprised of highly trained professionals, ready to handle any task with expertise.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="d-flex flex-column">
+                            <div class="d-flex align-items-center mb-3">
+                                <h3 class="flaticon-approved font-weight-normal d-flex flex-shrink-0 align-items-center justify-content-center bg-primary text-white m-0 mr-3" style="width: 45px; height: 45px;"></h3>
+                                <h6 class="text-truncate m-0">Govt Approved</h6>
+                            </div>
+                            <p>We are fully compliant with all government standards, ensuring our services meet the highest regulations.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="d-flex flex-column">
+                            <div class="d-flex align-items-center mb-3">
+                                <h3 class="flaticon-medal font-weight-normal d-flex flex-shrink-0 align-items-center justify-content-center bg-primary text-white m-0 mr-3" style="width: 45px; height: 45px;"></h3>
+                                <h6 class="text-truncate m-0">Award Winning</h6>
+                            </div>
+                            <p>Our commitment to excellence has earned us recognition, making us a trusted name in the industry.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="d-flex flex-column">
+                            <div class="d-flex align-items-center mb-3">
+                                <h3 class="flaticon-helmet font-weight-normal d-flex flex-shrink-0 align-items-center justify-content-center bg-primary text-white m-0 mr-3" style="width: 45px; height: 45px;"></h3>
+                                <h6 class="text-truncate m-0">Latest Equipments</h6>
+                            </div>
+                            <p>We utilize cutting-edge tools and technology to deliver the best possible service, ensuring precision and speed.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="d-flex flex-column">
+                            <div class="d-flex align-items-center mb-3">
+                                <h3 class="flaticon-surveillance font-weight-normal d-flex flex-shrink-0 align-items-center justify-content-center bg-primary text-white m-0 mr-3" style="width: 45px; height: 45px;"></h3>
+                                <h6 class="text-truncate m-0">24/7 Support</h6>
+                            </div>
+                            <p>We are available around the clock to ensure your {{niche}} service needs are met promptly and efficiently.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Features End -->
+
+    <!-- Services Start -->
+    <div class="container pt-5">
+        <div class="d-flex flex-column text-center mb-5">
+            <h5 class="text-primary mb-3">Top Notch Services</h5>
+            <h2 class="m-0">Our Expert {{niche}} in {{current}}</h2>
+        </div>
+        <div class="row pb-3">
+            {{city_page_service2}}
+        </div>
+    </div>
+    <!-- Services End -->
+
+    <div class="container-fluid mb-5" style="background: #f6f6f6;"></div>
+        <div class="row align-items-center">
+            <div class="col-lg-6 px-0">
+                <img width="100%" class="img-fluid" src="{{images_picker7}}" alt="Image">
+            </div>
+            <div class="col-lg-6 py-5 py-lg-0 px-3 px-lg-5">
+                <h2 class="mb-4">{{titleheaderwhychoose1}}</h2>
+                <p>{{descriptionheaderwhychoose1}}</p>
+                
+                <a href="{{tel_link_number}}" class="btn btn-lg px-4 btn-primary">Click Here To Call Us {{number}}</a>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="container-xxl py-5" style="background-color: white;">
+        <div class="container" style="text-align: left;" id="location">
+            <h2 class="mb-5 wow fadeInUp" data-wow-delay="0.1s">Areas We Serve {{niche}} in {{cityfull}}, {{stateaddrv}}</h2>
+            <div class="row">
+                <div class="col-12">{{embedded_code}}</div>
+            </div>
+            <br><br>
+            <div class="row g-4">
+                {{city_page_fotter}}
+                
+                
+            </div>
+            <br><br>
+            <h3>Popular Zip Codes</h3>
+            <br><br>
+            <div class="row g-4" style="text-align:center">
+                {{zipcode}}
+                  
+            </div>
+            <br><br>
+            <h3>{{cityfull}}, {{stateaddrv}} Insights: Population,
+                 Influence, and Service Areas</h3>
+            <p>{{datacontents}}</p>
+
+            
+        </div>
+    </div>
+
+    <div id="faq" class="container-xxl py-5" style="background-color: white;">
+        <div class="container" style="text-align: left;">
+            <h2>FAQ - {{niche}} Services</h2>
+            
+            {{allcityfaq}}
+        </div>
+    </div>
+    <!-- Testimonial Start -->
+    <div class="container-fluid my-5 p-0 py-5" style="background: #f6f6f6;">
+        <div class="container p-0 py-5">
+            <div class="d-flex flex-column text-center mb-5">
+                <h5 class="text-primary mb-3">Testimonial</h5>
+                <h1 class="m-0">What Our Clients Say</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel" style="display: block;">
+                {{testimonial_template}}
+                
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+    <!-- Footer Start -->
+    <div class="container-fluid bg-secondary text-white mt-5 py-5 px-sm-3 px-md-5">
+        <div class="row pt-5">
+            <div class="col-lg-4 col-md-12 mb-5">
+                <img src="../../static/img/logo.png" alt="{{niche}}" width="300" height="80">
+                <p class="m-0">{{niche}} is a free service to assist homeowners in connecting with local service providers. All contractors/providers are independent and {{niche}} does not warrant or guarantee any work performed. It is the responsibility of the homeowner to verify that the hired contractor furnishes the necessary license and insurance required for the work being performed. All persons depicted in a photo or video are actors or models and not contractors listed on {{niche}}.</p>
+            </div>
+            <div class="col-lg-8 col-md-12">
+                <div class="row">
+                    <div class="col-md-4 mb-5">
+                        <h5 class="text-primary mb-4">Quick Links</h5>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-white mb-2" href="https://{{domain}}/"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                            <a class="text-white mb-2" href="https://{{domain}}/about-us/"><i class="fa fa-angle-right mr-2"></i>About Us</a>
+                            <a class="text-white mb-2" href="https://{{domain}}/services/"><i class="fa fa-angle-right mr-2"></i>Our Services</a>
+                            <a class="text-white" href="https://{{domain}}/contact-us/"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                            <a href="#faq" class="text-white"><i class="fa fa-angle-right mr-2"></i>FAQs</a>
+                            <a href="#location" class="text-white"><i class="fa fa-angle-right mr-2"></i>Locations</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-5">
+                        
+                    </div>
+                    <div class="col-md-4 mb-5">
+                        <h5 class="text-primary mb-4">Get In Touch</h5>
+                        <p><i class="fa fa-map-marker-alt mr-2"></i>{{current}}</p>
+                        <p><i class="fa fa-phone-alt mr-2"></i>{{number}}</p>
+                        <p><i class="fa fa-envelope mr-2"></i>info@{{domain}}</p>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row pt-3">
+            <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
+                <p class="m-0 text-white">
+                    &copy; <a class="border-bottom" href="#" style="color: #FB7134;">{{niche}} near me </a> USA {{niche}} Pros 2024.
+					
+                </p>
+            </div>
+            
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-secondary border back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="../../static/lib/easing/easing.min.js"></script>
+    <script src="../../static/lib/waypoints/waypoints.min.js"></script>
+    <script src="../../static/lib/counterup/counterup.min.js"></script>
+    <script src="../../static/lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="../../static/mail/jqBootstrapValidation.min.js"></script>
+    <script src="../../static/mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="../../static/js/main.js"></script>
+</body>
+
+</html>
